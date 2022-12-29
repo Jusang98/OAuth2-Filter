@@ -1,0 +1,54 @@
+-- CREATE TABLE IF NOT EXISTS `Users`
+-- (
+--     `user_id` bigint      NOT NULL AUTO_INCREMENT,
+--     `name`    VARCHAR(45) NOT NULL,
+--     `pwd`     VARCHAR(45) NOT NULL,
+--     PRIMARY KEY (`user_id`)
+-- );
+--
+-- CREATE TABLE IF NOT EXISTS `Posts`
+-- (
+--     `post_id`    INT         NOT NULL AUTO_INCREMENT,
+--     `title`      VARCHAR(45) NOT NULL,
+--     `user_id`    VARCHAR(20) NULL DEFAULT NULL,
+--     `content`    VARCHAR(45) NOT NULL,
+--     `replyCount` INT         NULL DEFAULT '0',
+--     `postTime`   TIMESTAMP   NULL DEFAULT CURRENT_TIMESTAMP,
+--
+--     PRIMARY KEY (`post_id`)
+-- );
+--
+-- CREATE TABLE IF NOT EXISTS `Replys`
+-- (
+--     `reply_id`  bigint    NOT NULL AUTO_INCREMENT,
+--     `post_id`   INT       NOT NULL,
+--     `user_id`   INT       NOT NULL,
+--     `content`   TEXT      NOT NULL,
+--     `replyTime` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+--     PRIMARY KEY (`reply_id`)
+-- );
+--
+-- CREATE TABLE IF NOT EXISTS `Likes`
+-- (
+--     `post_id` INT NOT NULL,
+--     `user_id` INT NOT NULL,
+--     PRIMARY KEY (`post_id`, "user_id")
+-- );
+--
+-- merge into `Users` key (`user_id`) values (1, 'admin', '1111');
+-- merge into `Users` key (`user_id`) values (2, 'user', '1111');
+--
+-- merge into `Posts` key (`user_id`) values (1, '테스트제목', 1, '테스트내용', 1, '2022-05-11 10:30:00');
+-- merge into `Replys` key (`reply_id`) values (1, 1, 1, '테스트내용', '2022-05-11 10:30:00');
+-- -- `reply_id`  bigint    NOT NULL AUTO_INCREMENT,
+-- --     `post_id`   INT       NOT NULL,
+-- --     `user_id`   INT       NOT NULL,
+-- --     `content`   TEXT      NOT NULL,
+-- --     `replyTime` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+--
+-- -- `post_id`    INT         NOT NULL AUTO_INCREMENT,
+-- --     `title`      VARCHAR(45) NOT NULL,
+-- --     `user_id`    VARCHAR(20) NULL DEFAULT NULL,
+-- --     `content`    VARCHAR(45) NOT NULL,
+-- --     `replyCount` INT         NULL DEFAULT '0',
+-- --     `postTime`   TIMESTAMP   NULL DEFAULT CURRENT_TIMESTAMP,

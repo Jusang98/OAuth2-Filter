@@ -1,0 +1,29 @@
+
+###
+POST /residents HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber" : 10,
+  "name" : "깃허브상주",
+  "residentRegistrationNumber" : "980105-1234567",
+  "genderCode" : "남",
+  "birthDate" : "2023-03-05T12:30:30",
+  "birthPlaceCode" : "병원",
+  "registrationBaseAddress" : "광주광역시",
+  "deathDate" : null,
+  "deathPlaceCode" : null,
+  "deathPlaceAddress" : null,
+  "id" : "test",
+  "pwd" : "test",
+  "email" : "rlatkdwn3379@gmail.com"
+}
+###
+PUT /residents/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name" : "수정된이름"
+}
